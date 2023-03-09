@@ -10,7 +10,7 @@ public final class PurpleWolfAPI extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 // Plugin startup logic
-        if (!getServer().getPluginManager().getPlugins().equals("origins-spigotmc")) {
+        if (!getServer().getPluginManager().getPlugins().equals("originsspigotmc")) {
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI]              ____");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI]  ___        |    |   ___  [*]");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] |   | | | | |    |  |   |");
@@ -45,7 +45,7 @@ public final class PurpleWolfAPI extends JavaPlugin implements Listener {
             } else {
                 getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[PurpleWolfAPI] Successfully loaded version 0.1.1-SNAPSHOT (1.19.3)");
             }
-            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             getServer().getPluginManager().registerEvents(this, this);
 
