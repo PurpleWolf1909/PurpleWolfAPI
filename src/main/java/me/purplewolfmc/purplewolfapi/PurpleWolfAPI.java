@@ -10,7 +10,7 @@ public final class PurpleWolfAPI extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 // Plugin startup logic
-        if (!getServer().getPluginManager().getPlugins().equals("OriginsSpigotMC")) {
+        if (getServer().getPluginManager().getPlugin("OriginsSpigotMC") == null) {
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI]              ____");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI]  ___        |    |   ___  [*]");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] |   | | | | |    |  |   |");
@@ -19,7 +19,7 @@ public final class PurpleWolfAPI extends JavaPlugin implements Listener {
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] |     |_|_| |    |  |      |");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] |           |    |  |      |");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] |                   |");
-            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             if (this.getConfig().getString("console-dump-onstartup").equalsIgnoreCase("true")) {
                 getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "[PurpleWolfAPI] Loading API version 0.1.1");
                 getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] DUMPING PLUGIN-API FILES:");
@@ -45,7 +45,7 @@ public final class PurpleWolfAPI extends JavaPlugin implements Listener {
             } else {
                 getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "[PurpleWolfAPI] Successfully loaded version 0.1.1-SNAPSHOT (1.19.3)");
             }
-            getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            getServer().getConsoleSender().sendMessage(ChatColor.GRAY + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             getServer().getPluginManager().registerEvents(this, this);
 
