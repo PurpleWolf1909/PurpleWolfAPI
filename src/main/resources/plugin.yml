@@ -1,0 +1,4 @@
+name: PurpleWolfAPI
+version: '${version}'
+main: me.purplewolfmc.purplewolfapi.PurpleWolfAPI
+api-version: 1.19
