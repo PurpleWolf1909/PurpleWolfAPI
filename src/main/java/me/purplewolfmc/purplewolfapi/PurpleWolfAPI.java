@@ -10,7 +10,7 @@ public final class PurpleWolfAPI extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
 // Plugin startup logic
-        if (getServer().getPluginManager().getPlugin("OriginsSpigotMC") == null) {
+        if (getServer().getPluginManager().getPlugin("GenesisMC") == null) {
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI]              ____");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI]  ___        |    |   ___  [*]");
             getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[PurpleWolfAPI] |   | | | | |    |  |   |");
